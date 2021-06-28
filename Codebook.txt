@@ -1,0 +1,28 @@
+The uploaded file contains several steps to make the data tidy and also create a new set of data.
+1. The untidy data is downloaded and extracted in a folder called UCI HAR Dataset
+2. We assign appropriate names to variables:
+•	features. txt -> features
+•	activity_labels.txt -> activities
+•	subject_test.txt -> subject_test
+•	x_test.txt -> x_test
+•	y_test.txt -> y_test
+•	subject_train.txt -> subject_train
+•	x_train.txt -> x_train
+•	y_train.txt -> y_train
+3. We use ‘rbind()’ function to merge data:
+x = x_train + x_test
+y = y_train + y_test
+subject = subject_train + subject_test
+Therefore, we can have the final data using ‘cbind()’ function
+FinalData = subject + y + x
+4. Then we make a new set called Madetidy by calculating mean and standard deviation using their necessary codes.
+5. We label each column appropriately:
+Acc = Accelerometer
+Mag = Magnitude
+f = Frequency
+t = Time
+Gyro = Gyroscope
+BodyBody = Body
+-mean() = Mean
+-std() = Standard Deviation
+6. Finally Namedata is created which contains the mean and standard deviation of each variable.
